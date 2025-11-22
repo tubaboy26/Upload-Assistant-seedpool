@@ -49,6 +49,7 @@ function AudionutsUAGUI() {
   
   const [directories, setDirectories] = useState([
     { name: 'data', type: 'folder', path: '/data', children: [] },
+    { name: 'data', type: 'folder', path: '/Media', children: [] },
     { name: 'torrent_storage_dir', type: 'folder', path: '/torrent_storage_dir', children: [] },
     { name: 'Upload-Assistant', type: 'folder', path: '/Upload-Assistant', children: [] }
   ]);
@@ -57,7 +58,7 @@ function AudionutsUAGUI() {
   const [selectedName, setSelectedName] = useState('');
   const [customArgs, setCustomArgs] = useState('');
   const [isExecuting, setIsExecuting] = useState(false);
-  const [expandedFolders, setExpandedFolders] = useState(new Set(['/data', '/torrent_storage_dir']));
+  const [expandedFolders, setExpandedFolders] = useState(new Set(['/data','/Media', '/torrent_storage_dir']));
   const [sessionId, setSessionId] = useState('');
   const [sidebarWidth, setSidebarWidth] = useState(320);
   const [isResizing, setIsResizing] = useState(false);
